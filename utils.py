@@ -6,8 +6,8 @@ def load_data():
     :return:
     """
     with open('candidates.json', encoding="UTF-8") as f:
-        templates = json.load(f)
+        l_candidates = json.load(f)
 
-    return templates
+    return l_candidates
 #load_data()
 
