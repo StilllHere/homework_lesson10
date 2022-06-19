@@ -4,7 +4,7 @@ from show_smth import show1, show2, show_with_pre, get_u_by_skills
 
 app = Flask(__name__)
 
-li1 = show1()
+li1 = get_all_candidates()
 
 @app.route('/')
 def index():
@@ -14,7 +14,7 @@ def index():
 
 @app.route('/candidates/<int:id>')
 def user(id):
-    li2 = show2(id)
+    li2 = get_candidate(id)
     li3 = show_with_pre(li2)
     res = str = f'<img src= "{li2[0]}">'
     res += li3
